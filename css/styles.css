@@ -14,12 +14,12 @@ body {
     font-weight: 800;
 }
 
-ul {
-    margin: 0;
-}
-
 a {
     outline: 0;
+}
+
+button::-moz-focus-inner {
+    border: 0;
 }
 
 button {
@@ -29,8 +29,6 @@ button {
     cursor:pointer;
 }
 
-button::-moz-focus-inner {
-    border: 0;
 button:hover {
     color: white;
 }
@@ -61,6 +59,27 @@ input[type=range]::-moz-range-progress {
     border: 1px solid rgb(29,185,84);
     border-radius: 50px;
 }
+
+.icon-size-1 {
+    font-size: 1.5rem;
+}
+
+.icon-size-2 {
+    font-size: 2.25rem;
+}
+
+.icon-size-3 {
+    font-size: 1.9rem;
+}
+
+.icon-size-4 {
+    font-size: 1rem;
+}
+
+hr {
+    color: rgb(40,40,40);
+    width: 78%;
+    margin: .45rem auto 1rem auto;
 }
 
 /*---------------------- Layout ----------------------*/
@@ -86,7 +105,7 @@ input[type=range]::-moz-range-progress {
 #pagination {
     display: flex;
     align-items: center;
-    padding: 0 0 0 1.5rem;
+    margin: 0 0 0 1.5rem;
 }
 
 #pagination a {
@@ -102,9 +121,10 @@ input[type=range]::-moz-range-progress {
 }
 
 .btn-2 {
+    background: black;
     color: rgb(225,225,225);
     text-decoration: none;
-    border: 1px solid rgb(80,80,80);
+    border: 1px solid rgb(200, 200, 200);
     border-radius: 20px;
     padding: .6rem 2.2rem;
     letter-spacing: .06rem;
@@ -148,11 +168,7 @@ input[type=range]::-moz-range-progress {
     font-size: .7rem;
 }
 
-.icon-size-4 {
-    font-size: 1rem;
-}
-
-/*---------------------- Navigation ----------------------*/
+/*---------------------- Sidebar ----------------------*/
 
 #sidebar {
     background: rgb(4,4,4);
@@ -171,11 +187,12 @@ input[type=range]::-moz-range-progress {
     margin: 0 0 0.8rem 0;
 }
 
-#menu-1, #menu-2, #instalar-app {
+#menu-1, #menu-2 {
     display: flex;
     flex-direction: column;
     padding: 0 .5rem;
     list-style-type: none;
+    margin: 0;
 }
 
 .btn {
@@ -184,14 +201,15 @@ input[type=range]::-moz-range-progress {
     transition: color .4s;
 }
 
-#menu-1 a {/*This padding is for menu buttons WITH background*/
-    padding: .5rem 0 .5rem 1rem;
-    display: flex;
-}
-
 .btn:hover:not(active) {
     color: rgb(255,255,255);
     transition: color .4s;
+}
+
+#menu-1 a {/*This padding is for menu buttons WITH background*/
+    padding: .5rem 0 .5rem 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .active-bg {
@@ -200,61 +218,40 @@ input[type=range]::-moz-range-progress {
     color: rgb(255,255,255);
 }
 
-.active-no-bg {
-    color: rgb(255,255,255);
-}
-
 .btn-text {/*For centering button text vertically (only text! no icons!)*/
     margin-left: 1.1rem;
-    align-self: center;
 }
 
 #playlists {
-    padding-left: 1.5rem;
+    margin: 1.5rem 0 .7rem 1.5rem;
     font-weight: 400;
-    margin: 1.5rem 0 .7rem 0;
 }
 
 #menu-2 a {/*This padding is for menu buttons WITHOUT background*/
     padding: .3rem 0 .3rem 1rem;
     display: flex;
+    align-items: center;
 }
 
-.icon-size-1 {
-    font-size: 1.5rem;
-}
-
-.icon-size-2 {
-    font-size: 2.25rem;
-}
-
-.icon-size-3 {
-    font-size: 1.9rem;
-}
-
-hr {
-    color: rgb(40,40,40);
-    width: 78%;
-    margin: 1rem auto 1rem auto;
+.active-no-bg {
+    color: rgb(255,255,255);
 }
 
 #descubrimiento-semanal {
-    padding-left: 1.5rem;
+    margin-left: 1.5rem;
     font-weight: 400;
 }
 
 #instalar-app {
-    margin-top: auto;
-    padding: .1rem .5rem;
+    margin: auto .5rem .1rem .5rem;
 }
 
 #instalar-app a {
-    padding: .75rem 5rem .8rem 1rem;
+    padding: .76rem 0rem .76rem 1.35rem;
+    display: flex;
+    align-items: center;
 }
 
-#instalar-app a span {
-    margin-left: .4rem;
-}
 
 /*---------------------- Player ----------------------*/
 
