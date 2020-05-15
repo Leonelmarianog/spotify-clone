@@ -135,13 +135,14 @@ hr {
     transform: scale(105%);
 }
 
-#user-menu {
-    display:flex;
-    align-items: center;
-    padding-right: 3rem;
+.dropdown {
+    position: relative;
+    z-index: 10;
+    align-self: center;
+    margin-right: 3rem;
 }
 
-.user-btn {
+.dropdown-btn {
     background: rgb(4,4,4);
     border: 1px solid rgb(4,4,4);
     border-radius: 1rem;
@@ -150,22 +151,58 @@ hr {
     display: flex;
 }
 
-.user-btn:hover {
+.dropdown-btn:hover {
     background: rgb(40,40,40);
     border: 1px solid rgb(40,40,40);
 }
 
-#user-menu img {
+.dropdown-btn img {
     height: 1.65rem;
     border-radius: 100%;
 }
 
-#user-menu span{
+.dropdown-btn span{
     margin-left: .5rem;
     margin-right: .25rem;
     align-self: center;
     font-weight: bold;
     font-size: .7rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    display: none;
+    min-width: auto;
+    margin-top: .5rem;
+    right: .05rem;
+    background: rgb(40,40,40);
+    border-radius: 2.5%;
+    box-shadow: 0 5px 3px 0 black;
+}
+
+.dropdown-btn:focus ~ .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: .8rem 3.6rem .65rem 1.25rem;
+    text-decoration: none;
+    color: rgb(150,150,150);
+    font-weight: 400;
+}
+
+.dropdown-menu a > span {
+    margin-right: 2.5rem;
+}
+
+.dropdown-menu a:last-child {
+    border-top: 1px solid rgb(60,60,60);
+}
+
+.dropdown-menu a:hover {
+    background: rgb(60,60,60);
+    color: white;
 }
 
 /*---------------------- Sidebar ----------------------*/
