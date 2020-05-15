@@ -16,6 +16,13 @@ body {
 
 a {
     outline: 0;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 button::-moz-focus-inner {
@@ -211,7 +218,8 @@ hr {
     background: rgb(4,4,4);
     grid-column: 1;
     grid-row: 1/3;
-    display: flex;
+    padding: 0 .5rem;
+    display: flex;/*I need this for margin-top: auto to work on the last button of the sidebar*/
     flex-direction: column;
 }
 
@@ -220,33 +228,12 @@ hr {
 }
 
 #logo {
-    padding: 1.05rem 0 0 1.5rem;
-    margin: 0 0 0.8rem 0;
-}
-
-#menu-1, #menu-2 {
-    display: flex;
-    flex-direction: column;
-    padding: 0 .5rem;
-    list-style-type: none;
-    margin: 0;
+    margin: 1.05rem 0 1rem 1rem;
 }
 
 .btn {
     color: rgb(179,179,179);
-    text-decoration: none;
     transition: color .4s;
-}
-
-.btn:hover:not(active) {
-    color: rgb(255,255,255);
-    transition: color .4s;
-}
-
-#menu-1 a {/*This padding is for menu buttons WITH background*/
-    padding: .5rem 0 .5rem 1rem;
-    display: flex;
-    align-items: center;
 }
 
 .active-bg {
@@ -255,40 +242,48 @@ hr {
     color: rgb(255,255,255);
 }
 
-.btn-text {/*For centering button text vertically (only text! no icons!)*/
-    margin-left: 1.1rem;
-}
-
-#playlists {
-    margin: 1.5rem 0 .7rem 1.5rem;
-    font-weight: 400;
-}
-
-#menu-2 a {/*This padding is for menu buttons WITHOUT background*/
-    padding: .3rem 0 .3rem 1rem;
+#sidebar a {/*Allows to center icons and text of buttons in the sidebar*/
     display: flex;
     align-items: center;
 }
 
-.active-no-bg {
-    color: rgb(255,255,255);
+#menu-1 a {/*Required padding for the grey background on active buttons*/
+    padding: .5rem 0 .5rem 1rem;
+}
+
+#instalar-app a {/*Required padding for the grey background on active buttons*/
+    padding: .76rem 0rem .76rem 1.35rem;
+}
+
+#playlists, #descubrimiento-semanal {
+    margin: 1.5rem 0 .7rem 1rem;
+    font-weight: 400;
+}
+
+#menu-2 a {/*Padding for buttons without grey background*/
+    padding: .3rem 0 .3rem 1rem;
 }
 
 #descubrimiento-semanal {
-    margin-left: 1.5rem;
-    font-weight: 400;
+    margin: 0 0 0 1rem;
 }
 
 #instalar-app {
-    margin: auto .5rem .1rem .5rem;
+    margin: auto 0 .1rem 0;
 }
 
-#instalar-app a {
-    padding: .76rem 0rem .76rem 1.35rem;
-    display: flex;
-    align-items: center;
+.btn-text {/*Some margin between the icons and text of buttons*/
+    margin-left: 1.1rem;
 }
 
+.btn:hover:not(active) {/*turns text color of buttons white*/
+    color: rgb(255,255,255);
+    transition: color .4s;
+}
+
+.active-no-bg {/*For sidebar buttons without grey background*/
+    color: rgb(255,255,255);
+}
 
 /*---------------------- Player ----------------------*/
 
