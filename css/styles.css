@@ -107,6 +107,7 @@ hr {
     grid-column: 2/3;
     grid-row: 1;
     display: flex;
+    align-items: center;
 }
 
 #pagination {
@@ -121,16 +122,14 @@ hr {
 }
 
 #mejora-tu-cuenta {
+    display: flex;/*Without this transform doesn't work*/
     margin-left: auto;
-    display: flex;
-    align-items: center;
-    padding-right: 1rem;
+    margin-right: 1rem;
 }
 
 .btn-2 {
     background: black;
     color: rgb(225,225,225);
-    text-decoration: none;
     border: 1px solid rgb(200, 200, 200);
     border-radius: 20px;
     padding: .6rem 2.2rem;
@@ -139,13 +138,13 @@ hr {
 }
 
 .btn-2:hover {
-    transform: scale(105%);
+    border: 1px solid white;
+    -webkit-transform: scale(105%);
+            transform: scale(105%);
 }
 
 .dropdown {
     position: relative;
-    z-index: 10;
-    align-self: center;
     margin-right: 3rem;
 }
 
@@ -156,11 +155,7 @@ hr {
     color: rgba(255,255,255);
     padding: .1rem .4rem .1rem .05rem;
     display: flex;
-}
-
-.dropdown-btn:hover {
-    background: rgb(40,40,40);
-    border: 1px solid rgb(40,40,40);
+    align-items: center;
 }
 
 .dropdown-btn img {
@@ -171,36 +166,38 @@ hr {
 .dropdown-btn span{
     margin-left: .5rem;
     margin-right: .25rem;
-    align-self: center;
     font-weight: bold;
     font-size: .7rem;
 }
 
+.dropdown-btn:hover, .dropdown-btn:focus  {
+    background: rgb(40,40,40);
+    border: 1px solid rgb(40,40,40);
+}
+
 .dropdown-menu {
     position: absolute;
-    display: none;
-    min-width: auto;
     margin-top: .5rem;
-    right: .05rem;
+    right: .025rem;
     background: rgb(40,40,40);
     border-radius: 2.5%;
     box-shadow: 0 5px 3px 0 black;
+    display: none;
 }
 
-.dropdown-btn:focus ~ .dropdown-menu {
+.dropdown-btn:focus ~ .dropdown-menu {/*When the button is focused, the dropdown shows itself*/
     display: block;
 }
 
 .dropdown-menu a {
     display: block;
-    padding: .8rem 3.6rem .65rem 1.25rem;
-    text-decoration: none;
-    color: rgb(150,150,150);
+    padding: .8rem 3.6rem .69rem 1.25rem;
+    color: rgb(200,200,200);
     font-weight: 400;
 }
 
-.dropdown-menu a > span {
-    margin-right: 2.5rem;
+.dropdown-menu a span {
+    margin-right: 2.5rem;/*"Cerrar sesion" looks horrible without this.*/
 }
 
 .dropdown-menu a:last-child {
@@ -210,6 +207,10 @@ hr {
 .dropdown-menu a:hover {
     background: rgb(60,60,60);
     color: white;
+}
+
+.dropdown-btn:focus .icon-size-4 {/*To rotate the icon in the dropdown-btn*/
+    transform: rotate(180deg);
 }
 
 /*---------------------- Sidebar ----------------------*/
