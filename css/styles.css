@@ -299,28 +299,28 @@ hr {
 
 /*---------------------- track-controls ----------------------*/
 
-#track-controls > div > button:nth-child(3) {
+#track-controls div button:nth-child(3) {
     margin: 0 .5rem; 
 }
 
-#track-controls > div > button:first-child,
-#track-controls > div > button:last-child {
+#track-controls div button:first-child,
+#track-controls div button:last-child {
     margin: 0 1.25rem; 
 }
 
-#track-controls > div > button:hover {
+#track-controls div button:hover {
     color: white;
 }
 
-#track-controls > div > button:active {
+#track-controls div button:active {
     color: rgb(179,179,179);
 }
 
-#track-controls > div > button:nth-child(3):hover {
+#track-controls div button:nth-child(3):hover {
     transform: scale(105%);
 }
 
-#track-controls > div {
+#track-controls div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -368,20 +368,20 @@ hr {
     align-items: center;
 }
 
-#miscellaneous-controls > input {
+#miscellaneous-controls input {
     width: 5.5rem;
     margin-right: 1rem;
 }
 
-#miscellaneous-controls > input::-moz-range-track {
+#miscellaneous-controls input::-moz-range-track {
     width: 5.5rem;
 }
 
-#miscellaneous-controls > button:hover {
+#miscellaneous-controls button:hover {
     color: white;
 }
 
-#miscellaneous-controls > button:active {
+#miscellaneous-controls button:active {
     color: rgb(179,179,179);
 }
 
