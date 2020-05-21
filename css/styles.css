@@ -108,6 +108,8 @@ hr {
     grid-row: 1;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 90;
 }
 
 #pagination {
@@ -177,6 +179,7 @@ hr {
 
 .dropdown-menu {
     position: absolute;
+    z-index: 99;
     margin-top: .5rem;
     right: .025rem;
     background: rgb(40,40,40);
@@ -390,4 +393,102 @@ hr {
 
 #content {
     background: rgb(18,18,18);
+    grid-row: 1/3;
+    grid-column: 2/3;
+    overflow-y: auto;/*To be able to put multiple rows of cards without stretching the div.*/
+    padding-top: 4rem;
+}
+
+.section {
+    padding-left: 2rem;
+    padding-top: .8rem;
+    margin-bottom: 1.3rem;
+    position: relative;
+}
+
+.section-title {
+    margin: 0 0 .15rem 0;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+}
+
+.section-title:hover {
+    text-decoration: underline;
+}
+
+.section-description {
+    margin: 0;
+    font-weight: 400;
+    color: rgb(200,200,200);
+}
+
+.card-row {
+    display: flex;/*To align all the cards in a row, by default, flex puts all items in a row.*/
+    margin-top: 1.1rem;
+}
+
+.card {
+    background: rgb(40,40,40);
+    width: 8.8rem;
+    height: 13.45rem;
+    padding: 1.25rem;
+    border-radius: 3.7%;
+    margin-right: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.album-cover {
+    height: 8.8rem;
+    width: 8.85rem;
+}
+
+.album-title {
+    margin: 1rem 0 0 0;
+    font-size: .8rem;
+    text-overflow: ellipsis;/*this...*/
+    overflow: hidden;/*and this...*/
+    white-space: nowrap;/*and this... allows overflowed text to show with ellipsis...Thanks MDN*/
+}
+
+.album-description {
+    font-weight: 400;
+    font-size: .7rem;
+}
+
+.card-play-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgb(29,185,84);
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: none;
+    color: white;
+}
+
+.card:hover .card-play-button {/*When you hover the card, the play button appears.*/
+    display: block;
+    cursor: default;
+}
+
+.card-play-button:hover {
+    transform: scale(105%);
+}
+
+.card-play-button:active {
+    transform: scale(100%);
+}
+
+.ver-mas {
+    color: rgb(150,150,150);
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+}
+
+.ver-mas:hover {
+    text-decoration: underline;
 }
