@@ -15,7 +15,7 @@ body {
 }
 
 a {
-    outline: 0;
+    outline: none;
     text-decoration: none;
 }
 
@@ -40,6 +40,10 @@ button:hover {
     color: white;
 }
 
+button:focus {
+    outline: none;
+}
+/*
 input[type=range] {
     -webkit-appearance: none;
     width: 26rem;
@@ -372,7 +376,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: .8rem 0 .6rem 0;
+    margin: .8rem 0 .35rem 0;
 }
 
 /*---------------------- track-info ----------------------*/
