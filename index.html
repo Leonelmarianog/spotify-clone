@@ -15,6 +15,7 @@
     <div id="main-grid">
 
         <div id="header">
+
             <div id="pagination">
                 <a href="#"><i class="fas fa-chevron-circle-left icon-size-3"></i></a>
                 <a href="#"><i class="fas fa-chevron-circle-right icon-size-3"></i></a>
@@ -28,9 +29,11 @@
                     <a href="#"><span>Cerrar Sesión</span></a>
                 </div>
             </div>
+
         </div>
 
         <div id="sidebar">
+
             <div id="logo"><a  href="#"><img src="img/logo.jpg"></a></div>
             <ul id="menu-1">  
                 <li><a href="#" class="btn active-bg"><i class="fas fa-home icon-size-1"></i><span class="btn-text">Inicio</span></a></li>
@@ -44,12 +47,23 @@
             </ul>
             <hr>
             <div id="descubrimiento-semanal"><a href="#" class="btn">Descubrimiento semanal</a></div>
-            <div id="instalar-app"><a href="#" class="btn"><span><i class="fas fa-arrow-circle-down"></i><span class="btn-text">Instalar app</span></a></div>
+            <div id="slider">
+                <div id="instalar-app"><a href="#" class="btn"><span><i class="fas fa-arrow-circle-down"></i><span class="btn-text">Instalar app</span></a></div>
+                <a href="#">
+                    <img src="img/savatage.png" id="slider-img"/>
+                    <button type="button" id="slide-down-btn"><i class="fas fa-chevron-circle-down icon-size-1"></i></button>
+                </a>
+            </div>
+
         </div>
 
         <div id="player">
+
             <div id='track-info'>
-                <img src='img/savatage.png'/>
+                <a href="#" id="track-cover-wrapper">
+                    <img src='img/savatage.png' id="track-cover"/>
+                    <button type="button" id="slide-up-btn"><i class="fas fa-chevron-circle-up icon-size-1"></i></button>
+                </a>
                 <div id='name-band'>
                     <button id="track-name">24 Hrs. Ago</button>
                     <button id="band">Savatage</button>
@@ -72,6 +86,7 @@
                 <button><i class='fas fa-volume-up'></i></button>
                 <input type='range' min='0' max='100' value='0'></input>
             </div>
+
         </div>
 
         <div id="content">
@@ -263,7 +278,9 @@
                 </div>
                 <a href="#" class="ver-mas">VER MÁS</a>
             </div>
+
         </div>
+
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
