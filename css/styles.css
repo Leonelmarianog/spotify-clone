@@ -103,19 +103,21 @@ hr {
 /*---------------------- Header ----------------------*/
 
 #header {
-    background: rgba(18,18,18,1);
+    background: rgba(4,4,4,0);
     grid-column: 2/3;
     grid-row: 1;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 90;
+    pointer-events: none;/*I want to be able to click through the header and grab the scroll.*/
 }
 
 #pagination {
     display: flex;
     align-items: center;
     margin: 0 0 0 1.5rem;
+    pointer-events: all;/*Since the parent element can't be clicked now, I need to put this one in each child to be able to click them.*/
 }
 
 #pagination a {
@@ -133,6 +135,7 @@ hr {
     padding: .6rem 2.2rem;
     letter-spacing: .06rem;
     font-size: .75rem;
+    pointer-events: all;
 }
 
 #mejorar-tu-cuenta:hover {
@@ -149,6 +152,7 @@ hr {
 .dropdown {
     position: relative;
     margin-right: 3rem;
+    pointer-events: all;
 }
 
 .dropdown-btn {
